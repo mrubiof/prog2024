@@ -1,0 +1,39 @@
+Crea una aplicación que permita adivinar un número. La aplicación genera un número
+aleatorio del 1 al 100. A continuación, va pidiendo números y va respondiendo si el
+número a adivinar es mayor o menor que el introducido, además de los intentos que te
+quedan (tienes 10 intentos para acertarlo). El programa termina cuando se acierta el
+número (además te dice en cuantos intentos lo has acertado), si se llega al límite de
+intentos te muestra el número que había generado.
+
+
+Proceso Adivinar
+	Definir numAdivinar, num, contador como entero;
+	contador = 0;
+	numAdivinar <- aleatorio(0, 100);
+	Escribir "Descubra el número entre 0 a 100, tiene 10 intentos";
+	
+	Escribir "Introduzca el número";
+	Leer num;
+
+	Mientras contador < 10 && numAdivinar <> num Entonces
+		Si num < numAdivinar Entonces
+			Escribir "El número escondido es mayor"
+		Sino 
+			Escribir "El número escondido es menor"
+		Finsi
+			
+		contador = contador + 1;
+		Escribir "Vuelva a intentarlo";
+		Leer num;
+		
+
+	FinMientras;
+
+	Si numAdivinar=num Entonces
+		Escribir "Ha acertado en ", contador " intentos!";
+	sino
+		Escribir "te has quedado sin intentos, el numero era: " numAdivinar;
+	finsi
+
+
+Fin proceso Adivinar;
